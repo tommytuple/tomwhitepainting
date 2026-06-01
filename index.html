@@ -1,41 +1,48 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html style="scroll-behavior: smooth" lang="en" data-theme="light">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Tom White - Painter &amp; Decorator - Brighton &amp; Hove</title>
+        <title>
+            Tom White - Painter &amp; Decorator - Brighton &amp; Hove | Contact
+        </title>
         <link
             rel="stylesheet"
             href="https://unpkg.com/@digicreon/mucss/dist/mu.azure.css"
         />
-
     </head>
-    <body>
-        <section class="hero hero-primary">
-            <h1>Tom White</h1>
-            <h2 style="margin-bottom: 2rem">Painting &amp; Decorating</h2>
-            <img src="photos/IMG_20210909_093231.webp" alt="Paint Blocks" />
+    <body class="container" style="margin-top: 2rem; ">
+        <section>
+            <img
+                src="photos/tomwhite_logo.webp"
+                alt="Tom White Logo"
+            />
         </section>
 
-        <main class="container ">
-            <nav style="margin-bottom: 1rem">
-                <ul>
-                    <li><strong>Navigation:</strong></li>
-                </ul>
-                <input
-                    type="checkbox"
-                    id="my-nav"
-                    class="navbar-toggle"
-                    hidden
-                />
-                <label for="my-nav" class="navbar-burger">&#9776;</label>
-                <ul class="navbar-menu">
-                    <li><a href="#interiors">Interiors</a></li>
-                    <li><a href="#exteriors">Exteriors</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <main id="main">
+
+            <article >
+                <nav>
+                    <input
+                        type="checkbox"
+                        id="my-nav"
+                        class="navbar-toggle"
+                        hidden
+                    />
+
+                    <label for="my-nav" class="navbar-burger">&#9776;</label>
+                    <ul class="navbar-menu">
+                        <li class="nav-heading">Sections:</li>
+                        <li><a href="#interiors">Interiors↓</a></li>
+                        <li><a href="#exteriors">Exteriors↓</a></li>
+
+                        <li class="nav-heading">Pages:</li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </article>
 
             <article class="card-primary" style="margin-bottom: 1rem">
                 <header><h3>Intro<h3></header>
@@ -53,12 +60,12 @@
             <article
                 id="interiors"
                 class="card-primary --mu-card-box-shadow"
-                style="margin-bottom: 3rem"
+                style="margin-bottom: 3rem;"
             >
                 <header><h3>For Interiors&hellip;</h3></header>
 
                 <p>
-                    Let's start with my favourite work photo. This was all white and crying
+                    This was all white and crying
                     out to have details picked out. I think it looks amazing in grey, gold and white
                     (or more precisely Shirting by Little Greene)
                 </p>
@@ -71,7 +78,6 @@
                 <p>From:</p>
                 <img
                     src="photos/2.webp"
-                    loading="lazy"
                     style="margin-bottom: 1.5rem"
                     alt="Room with old lining paper removed before redecoration"
                 />
@@ -232,11 +238,10 @@
                 />
             </article>
 
-            <article class="card-primary" style="margin-bottom: 3rem">
-                <div class="grid">
-                    <a href="#">↑ Top of page</a>
-                    <a href="#contact">↓ The contact form</a>
-                </div>
+            <article class="card" style="margin-bottom: 3rem">
+            <div class="row">
+                <div class="col-6"> <a href="#main">↑ Top of page and navigation bar</a></div>
+            </div>
             </article>
 
             <article
@@ -340,172 +345,14 @@
                 />
             </article>
 
-
-            <article
-                id="about"
-
-                class="card-primary  "
-                style="
-                    content-visibility: auto;
-                    contain-intrinsic-size: 0 6000px;
-                "
-                >
-
-             <header><h3>About Me</h3></header>
-                         <figure style="margin-bottom: 2rem" >
-                         <img
-                             src="photos/IMG_20231015_104933.webp"
-                             loading="lazy"
-                             alt="Tom White "
-                         />
-                         <figcaption>Me and my dad's dog Ellie</figcaption>
-                         </figure>
-
-
-                         <p>As you know, I work as a painter. I like a lot of what Brighton has
-                             to offer such as the beach, particularly Ovingdean beach. I love walking
-                             in the Downs with friends or alone. My home hobby is coding. I love the Gleam
-                             programming language and for the past few months I have been working on a (kind of)
-                             SM platform. </p>
-                         <p>One reason I live in Brighton at all is for 5 rhythms dance, which has had an
-                             incredible positive effect on my life. </p>
-                         <p>I like to sprinkle my life with adventure here and there. Whether it be hiking and
-                             wild camping in Jordan or Kent, or swimming in the Amazon or the King Alfred!
-                         </p>
+            <article class="card-primary" style="margin-bottom: 3rem">
+            <div class="row">
+                <div class="col-6"> <a href="#main">↑ Top of page and navigation bar</a></div>
+            </div>
             </article>
 
-            <article
-                id="contact"
-                class="card-primary"
-                style="margin-bottom: 3rem"
-            >
-                <header><h3>Get in Touch</h3></header>
 
-                <form action="https://formspree.io/f/mgoqryll" method="POST">
-                    <label
-                        >Your name
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Your name"
-                            required
-                        />
-                    </label>
 
-                    <label
-                        >Email address
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="your@email.com"
-                            required
-                        />
-                    </label>
-
-                    <fieldset>
-                        <legend>Type of work</legend>
-                        <label
-                            ><input
-                                type="radio"
-                                name="work_type"
-                                value="Interior"
-                                required
-                            />
-                            Interior</label
-                        >
-                        <label
-                            ><input
-                                type="radio"
-                                name="work_type"
-                                value="Exterior"
-                            />
-                            Exterior</label
-                        >
-                        <label
-                            ><input
-                                type="radio"
-                                name="work_type"
-                                value="Both"
-                            />
-                            Both</label
-                        >
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Working alongside other trades?</legend>
-                        <label
-                            ><input
-                                type="radio"
-                                name="other_trades"
-                                value="Yes"
-                                required
-                            />
-                            Yes</label
-                        >
-                        <label
-                            ><input
-                                type="radio"
-                                name="other_trades"
-                                value="No"
-                            />
-                            No</label
-                        >
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Private or commercial?</legend>
-                        <label
-                            ><input
-                                type="radio"
-                                name="job_type"
-                                value="Private"
-                                required
-                            />
-                            Private</label
-                        >
-                        <label
-                            ><input
-                                type="radio"
-                                name="job_type"
-                                value="Commercial"
-                            />
-                            Commercial</label
-                        >
-                    </fieldset>
-
-                    <label
-                        >Preferred start date <small>(optional)</small>
-                        <input
-                            type="text"
-                            name="start_date"
-                            placeholder="e.g. early March, after Easter…"
-                        />
-                    </label>
-
-                    <label
-                        >Required finish date <small>(optional)</small>
-                        <input
-                            type="text"
-                            name="finish_date"
-                            placeholder="e.g. end of April, flexible…"
-                        />
-                    </label>
-
-                    <label
-                        >Message
-                        <textarea
-                            name="message"
-                            rows="6"
-                            placeholder="Tell me a bit about the job…"
-                            required
-                        ></textarea>
-                    </label>
-
-                    <button type="submit" class="btn-primary">
-                        Send message
-                    </button>
-                </form>
-            </article>
         </main>
     </body>
 </html>
