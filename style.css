@@ -1,0 +1,26 @@
+/* Shared layout for tomwhitepainting.
+   mucss is loaded first and handles everything else; these rules only
+   override the content column width and how photos sit inside it. */
+
+@media (min-width: 1024px) {
+    /* A column that stays readable on a laptop but still fills a large
+       monitor: floor 900px, ceiling 1300px, scaling gently between. The
+       45vw means it only starts to grow past ~2000px, so a 1920px laptop
+       keeps the tighter 900px. Below 1024px mucss's own ladder
+       (510 / 700 / 950px) applies unchanged. */
+    body.container {
+        max-width: clamp(900px, 45vw, 1300px);
+    }
+
+    /* Every photo fills the column, so their edges line up with each other
+       and with the paragraphs. Heights vary with each photo's shape, which
+       is the trade for never cropping one. */
+    article picture {
+        display: block;
+    }
+
+    article img {
+        width: 100%;
+        height: auto;
+    }
+}
