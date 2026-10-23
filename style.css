@@ -2,14 +2,48 @@
    mucss is loaded first and handles everything else; these rules only
    override the content column width and how photos sit inside it. */
 
-@media (min-width: 1024px) {
+:root {
     /* A column that stays readable on a laptop but still fills a large
        monitor: floor 900px, ceiling 1300px, scaling gently between. The
        45vw means it only starts to grow past ~2000px, so a 1920px laptop
-       keeps the tighter 900px. Below 1024px mucss's own ladder
-       (510 / 700 / 950px) applies unchanged. */
+       keeps the tighter 900px. */
+    --column: clamp(900px, 45vw, 1300px);
+
+    /* The wider column the colour explorer page uses. 88vw fills most of
+       the screen on a laptop, and the 1800px ceiling is the point of it:
+       left to grow, the explorer's swatch grid adds columns forever and an
+       ultrawide monitor ends up with colours further apart than the eye can
+       compare. */
+    --wide-column: clamp(900px, 88vw, 1800px);
+}
+
+@media (min-width: 1024px) {
+    /* Below 1024px mucss's own ladder (510 / 700 / 950px) applies
+       unchanged, on every page. */
     body.container {
-        max-width: clamp(900px, 45vw, 1300px);
+        max-width: var(--column);
+    }
+
+    /* The explorer is a tool, not prose: a colour wheel, filter panels and
+       a swatch grid laid out as repeat(auto-fill, minmax(150px, 1fr)), so
+       every extra 150px of width is another column of colours to compare.
+       Its page gets the wider column; the rest of the site keeps the
+       reading one. */
+    body.container.wide {
+        max-width: var(--wide-column);
+    }
+
+    /* The logo keeps the size it has on every other page. Without this it
+       would grow with the column up to its natural 1600px and the branding
+       would jump about between pages. min() so it can still shrink. */
+    body.wide section img {
+        max-width: min(100%, var(--column));
+    }
+
+    /* The words introducing the explorer stay at a readable measure instead
+       of stretching to 1800px, which no one can follow across. */
+    body.wide .card-primary > p {
+        max-width: min(100%, 70ch);
     }
 
     /* Every photo fills the column, so their edges line up with each other
