@@ -10,6 +10,24 @@
             rel="stylesheet"
             href="https://unpkg.com/@digicreon/mucss/dist/mu.azure.css"
         />
+        <style>
+            /* Keep photos inside one screenful on desktop. mucss lets
+               .container reach 1450px, and img{max-width:100%} means a tall
+               portrait renders over 2000px high. Below 769px the mobile
+               images already fit the viewport, so this only applies above. */
+            @media (min-width: 769px) {
+                article picture {
+                    display: block;
+                }
+
+                article img {
+                    max-height: 70vh;
+                    width: auto;
+                    display: block;
+                    margin-inline: auto;
+                }
+            }
+        </style>
     </head>
     <body class="container" style="margin-top: 2rem; ">
         <section>
