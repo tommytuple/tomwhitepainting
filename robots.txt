@@ -1,0 +1,8 @@
+# tomwhitepainter.co.uk
+# Everything here is public and crawlable, including the AI crawlers —
+# the paint colour pages are worth being quoted from.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://tomwhitepainter.co.uk/sitemap.xml
